@@ -1,0 +1,1 @@
+Information website about myself. The site has been created using basics html and css techniques previously. After a while I decided to use more advanced css tools and JS to make this site look better and add nice functionality as well.
