@@ -21,6 +21,53 @@ header {
   & > * {
     position: absolute;
   }
+  div.burger {
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 30px;
+    transition: 0.3s linear;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  aside.menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -170px;
+    width: 170px;
+    background-color: #000;
+    transition: 0.3s linear;
+    z-index: 2;
+  }
+  aside.menu.active {
+    left: 0;
+  }
+  .fas {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .menu li {
+    padding: 0 20px 0 20px;
+  }
+  .menu a {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    font-family: "Saira Condensed", sans-serif;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+  }
 
   img {
     height: 50%;
