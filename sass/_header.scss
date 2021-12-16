@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background-color: deepskyblue;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  & > * {
+    position: absolute;
+  }
+
+  img {
+    height: 50%;
+    bottom: 0;
+    right: 0;
+  }
+  div.welcome {
+    z-index: 1;
+    top: 8%;
+    left: 5%;
+    right: 5%;
+    font-family: "Saira Condensed", sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    p {
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 20px;
+      margin-top: 12px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+    button {
+      font-family: "Saira", sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: white;
+      line-height: 30px;
+      padding: 0 20px;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: 2px solid white;
+    }
+  }
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+  header {
+    img {
+      right: -11%;
+    }
+    div.welcome {
+      p {
+        font-size: 60px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (orientation: portrait) and (min-width: 411px) {
+  header {
+    img {
+      right: -15%;
+    }
+    div.welcome {
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      button {
+        font-size: 18px;
+        margin-top: 69px;
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  header {
+    img {
+      right: 0;
+    }
+    div.welcome {
+      h1 {
+        font-size: 34px;
+      }
+      h2 {
+        font-size: 34px;
+      }
+      button {
+        font-size: 28px;
+        line-height: 60px;
+        margin-top: 69px;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  header {
+    img {
+      height: 80%;
+      bottom: 0;
+      right: -10%;
+    }
+    div.welcome {
+      top: 8%;
+      left: 5%;
+      right: 50%;
+      button {
+        margin-top: 70px;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  header {
+    div.welcome {
+      right: 55%;
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        margin-top: 50px;
+        line-height: 40px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  header {
+    img {
+      height: 95%;
+      right: -19%;
+    }
+    div.welcome {
+      top: 15%;
+      p {
+        font-size: 56px;
+      }
+      h1 {
+        margin-top: 50px;
+        font-size: 34px;
+      }
+      h2 {
+        font-size: 34px;
+      }
+      button {
+        margin-top: 50px;
+        line-height: 55px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+  header {
+    img {
+      height: 85%;
+      right: -9%;
+    }
+    div.welcome {
+      top: 8%;
+      left: 5%;
+      right: 40%;
+      text-align: left;
+      p {
+        font-size: 86px;
+      }
+      h1 {
+        margin-top: 50px;
+        font-size: 60px;
+      }
+      h2 {
+        padding-top: 0;
+        font-size: 60px;
+      }
+      button {
+        margin-top: 40px;
+        line-height: 65px;
+        font-size: 34px;
+        padding: 0 40px;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  div.welcome {
+    button {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: white;
+      color: #444;
+    }
+  }
+}
