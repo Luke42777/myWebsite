@@ -13,7 +13,7 @@
 header {
   position: relative;
   height: 100vh;
-  background-color: deepskyblue;
+  background-color: rgb(170, 174, 175);
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
@@ -22,68 +22,52 @@ header {
     position: absolute;
   }
   div.burger {
+    z-index: 1;
     top: 15px;
     right: 15px;
     font-size: 20px;
     line-height: 30px;
     width: 30px;
     transition: 0.3s linear;
-
     :hover {
       cursor: pointer;
     }
   }
 
-  aside.menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -170px;
-    width: 170px;
-    background-color: #000;
-    transition: 0.3s linear;
-    z-index: 2;
-  }
-  aside.menu.active {
-    left: 0;
-  }
   .fas {
+    color: rgb(77, 2, 2);
     display: none;
   }
   .show {
     display: block;
   }
-  .menu li {
-    padding: 0 20px 0 20px;
-  }
-  .menu a {
-    display: block;
-    width: 100%;
-    margin-top: 40px;
-    font-family: "Saira Condensed", sans-serif;
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom: 1px solid white;
-    text-decoration: none;
-  }
 
-  img {
-    height: 50%;
+  img.grey {
+    height: 100%;
+    bottom: 0;
+    right: -30%;
+    opacity: 0.2;
+    animation: grey 4s linear infinite alternate;
+  }
+  img.color {
+    height: 30%;
     bottom: 0;
     right: 0;
+    animation: color 4s linear infinite alternate;
   }
+
   div.welcome {
     z-index: 1;
     top: 8%;
     left: 5%;
     right: 5%;
     font-family: "Saira Condensed", sans-serif;
-    color: white;
+    color: black;
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
+    animation: welcome 4s linear infinite alternate;
+
     p {
       font-weight: bold;
     }
@@ -97,6 +81,40 @@ header {
     }
   }
 }
+@keyframes color{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes grey{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+ 
+    transform: translateX(2%);
+  }
+}
+
+@keyframes welcome{
+  0%{
+    transform: scale(1)
+  }
+  100%{
+ 
+    transform: scale(1.1);
+  }
+}
+// section {
+//   font-size: 40px;
+//   background-color: bisque;
+//   width: 100%;
+//   height: 200vh;
+// }
 
 @media (orientation: portrait) and (min-width: 360px) {
   header {
@@ -224,5 +242,5 @@ header {
     }
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 }
