@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 header {
   position: relative;
   height: 100vh;
@@ -81,49 +75,49 @@ header {
     }
   }
 }
-@keyframes color{
-  0%{
+@keyframes color {
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-5%);
   }
 }
 
-@keyframes grey{
-  0%{
+@keyframes grey {
+  0% {
     transform: translateX(0);
   }
-  100%{
- 
+  100% {
     transform: translateX(2%);
   }
 }
 
-@keyframes welcome{
-  0%{
-    transform: scale(1)
+@keyframes welcome {
+  0% {
+    transform: scale(1);
   }
-  100%{
- 
+  100% {
     transform: scale(1.1);
   }
 }
-// section {
-//   font-size: 40px;
-//   background-color: bisque;
-//   width: 100%;
-//   height: 200vh;
-// }
-
 @media (orientation: portrait) and (min-width: 360px) {
   header {
+    div.burger {
+      top: 10px;
+      font-size: 38px;
+      line-height: 45px;
+      width: 45px;
+    }
     img {
-      right: -11%;
+      right: -15%;
+      &.grey {
+        right: -35%;
+      }
     }
     div.welcome {
       p {
-        font-size: 60px;
+        font-size: 40px;
       }
       h1 {
         font-size: 24px;
@@ -136,15 +130,26 @@ header {
 }
 @media (orientation: portrait) and (min-width: 411px) {
   header {
+    div.burger {
+      font-size: 28px;
+      line-height: 35px;
+      width: 35px;
+    }
     img {
       right: -15%;
+      &.grey {
+        right: -35%;
+      }
     }
     div.welcome {
+      p {
+        font-size: 50px;
+      }
       h1 {
-        font-size: 24px;
+        font-size: 30px;
       }
       h2 {
-        font-size: 24px;
+        font-size: 30px;
       }
     }
   }
@@ -152,95 +157,132 @@ header {
 
 @media (orientation: portrait) and (min-width: 768px) {
   header {
+    div.burger {
+      font-size: 42px;
+      line-height: 45px;
+      width: 45px;
+    }
     img {
       right: 0;
+      &.grey {
+        height: 100%;
+        bottom: 0;
+        right: -15%;
+      }
     }
+
     div.welcome {
+      p {
+        font-size: 90px;
+      }
       h1 {
-        font-size: 34px;
+        font-size: 44px;
       }
       h2 {
-        font-size: 34px;
+        font-size: 38px;
       }
     }
   }
 }
-
+@media (orientation: portrait) and (min-width: 1024px) {
+  header {
+    div.welcome {
+      p {
+        font-size: 120px;
+      }
+      h1 {
+        font-size: 64px;
+      }
+      h2 {
+        font-size: 58px;
+      }
+    }
+  }
+}
 @media (orientation: landscape) {
   header {
-    img {
-      height: 80%;
-      bottom: 0;
-      right: -10%;
+    div.burger {
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      line-height: 30px;
+      width: 30px;
+    }
+    img.grey {
+      right: 50%;
+    }
+    img.color {
+      right: 5%;
     }
     div.welcome {
-      top: 8%;
-      left: 5%;
-      right: 50%;
+      top: 18%;
+      left: 35%;
+      right: 15%;
+      font-size: 40px;
     }
   }
 }
 
 @media (orientation: landscape) and (min-width: 640px) {
   header {
+    div.burger {
+      font-size: 25px;
+      line-height: 35px;
+      width: 35px;
+    }
+    img.grey {
+      right: 35%;
+    }
+    img.color {
+      right: 10%;
+    }
     div.welcome {
-      right: 55%;
-      h1 {
-        font-size: 24px;
-      }
-      h2 {
-        font-size: 22px;
-      }
+      top: 18%;
+      left: 35%;
+      right: 15%;
+      font-size: 60px;
     }
   }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
   header {
-    img {
-      height: 95%;
-      right: -19%;
+    div.burger {
+      font-size: 35px;
+      line-height: 45px;
+      width: 45px;
+    }
+
+    img.grey {
+      right: 40%;
+    }
+    img.color {
+      right: 10%;
     }
     div.welcome {
-      top: 15%;
+      font-size: 70px;
+
       p {
-        font-size: 56px;
+        font-weight: bold;
       }
       h1 {
-        margin-top: 50px;
-        font-size: 34px;
+        font-size: 40px;
+        margin-top: 12px;
       }
       h2 {
-        font-size: 34px;
+        font-size: 40px;
       }
     }
   }
 }
 
-@media (orientation: landscape) and (min-width: 1280px) {
+@media (min-width: 1025px) {
   header {
-    img {
-      height: 85%;
-      right: -9%;
+    img.grey {
+      right: 50%;
     }
-    div.welcome {
-      top: 8%;
-      left: 5%;
-      right: 40%;
-      text-align: left;
-      p {
-        font-size: 86px;
-      }
-      h1 {
-        margin-top: 50px;
-        font-size: 60px;
-      }
-      h2 {
-        padding-top: 0;
-        font-size: 60px;
-      }
+    img.color {
+      right: 5%;
     }
   }
-}
-@media (min-width: 1025px) {
 }
