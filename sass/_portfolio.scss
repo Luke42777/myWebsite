@@ -1,0 +1,50 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  h1 {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 28px;
+    background-color: rgb(78, 131, 201);
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 15px;
+    line-height: 100px;
+  }
+  article.project {
+    width: 100%;
+    background-color: cadetblue;
+    margin: 0 auto 0 auto;
+    border-bottom: 2px solid black;
+    &:nth-of-type(4){
+        border-bottom: none;
+    }
+    div.web {
+        text-align: left;
+        margin: 20px 10% 0 10%;
+      img {
+        width: 80%;
+      }
+    }
+    div.about {
+        color:black;
+        font-family: 'Saira', sans-serif;
+        font-weight: normal;
+        text-align: left;
+        padding: 10px 20px 20px 0;
+      h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        border-bottom: 2px solid white;
+        text-indent: 20px;
+      
+      }
+      p {
+        font-size: 12px;
+        padding-left: 20px;
+
+      }
+    }
+  }
+}

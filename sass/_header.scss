@@ -16,7 +16,8 @@ header {
     position: absolute;
   }
   div.burger {
-    z-index: 1;
+    position: fixed;
+    z-index: 3;
     top: 15px;
     right: 15px;
     font-size: 20px;
@@ -37,22 +38,22 @@ header {
   }
 
   img.grey {
-    height: 100%;
-    bottom: 0;
-    right: -30%;
+    height: 120%;
+    bottom: -20%;
+    left: -15%;
     opacity: 0.2;
     animation: grey 4s linear infinite alternate;
   }
   img.color {
     height: 30%;
     bottom: 0;
-    right: 0;
+    left: 0;
     animation: color 4s linear infinite alternate;
   }
 
   div.welcome {
     z-index: 1;
-    top: 8%;
+    top: 15%;
     left: 5%;
     right: 5%;
     font-family: "Saira Condensed", sans-serif;
@@ -109,12 +110,6 @@ header {
       line-height: 45px;
       width: 45px;
     }
-    img {
-      right: -15%;
-      &.grey {
-        right: -35%;
-      }
-    }
     div.welcome {
       p {
         font-size: 40px;
@@ -134,12 +129,6 @@ header {
       font-size: 28px;
       line-height: 35px;
       width: 35px;
-    }
-    img {
-      right: -15%;
-      &.grey {
-        right: -35%;
-      }
     }
     div.welcome {
       p {
@@ -163,11 +152,11 @@ header {
       width: 45px;
     }
     img {
-      right: 0;
+      left: 0;
       &.grey {
-        height: 100%;
-        bottom: 0;
-        right: -15%;
+        height: 130%;
+        bottom: -25%;
+        left: -8%;
       }
     }
 
@@ -186,6 +175,11 @@ header {
 }
 @media (orientation: portrait) and (min-width: 1024px) {
   header {
+    div.burger {
+      font-size: 47px;
+      line-height: 50px;
+      width: 50px;
+    }
     div.welcome {
       p {
         font-size: 120px;
@@ -209,10 +203,13 @@ header {
       width: 30px;
     }
     img.grey {
-      right: 50%;
+      height: 130%;
+      left: -2%;
+      bottom: -10%;
     }
     img.color {
-      right: 5%;
+      left: 0;
+      height: 40%;
     }
     div.welcome {
       top: 18%;
@@ -229,12 +226,6 @@ header {
       font-size: 25px;
       line-height: 35px;
       width: 35px;
-    }
-    img.grey {
-      right: 35%;
-    }
-    img.color {
-      right: 10%;
     }
     div.welcome {
       top: 18%;
@@ -254,12 +245,14 @@ header {
     }
 
     img.grey {
-      right: 40%;
+      left: -10%;
     }
     img.color {
-      right: 10%;
+      height: 30%;
     }
     div.welcome {
+      left: 45%;
+      right: 10%;
       font-size: 70px;
 
       p {
@@ -279,10 +272,7 @@ header {
 @media (min-width: 1025px) {
   header {
     img.grey {
-      right: 50%;
-    }
-    img.color {
-      right: 5%;
+      left: -2%;
     }
   }
 }
