@@ -1,7 +1,7 @@
 .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .techno {
@@ -83,21 +83,39 @@
 
 @media (min-width: 1024px) {
   .techno {
-    display: block;
     h1 {
-    text-align: center;
-    font-size: 40px;
+      width: 100%;
+      text-align: center;
+      font-size: 50px;
     }
     .feature {
-        float: left;
-        width: 33.33%;
-        padding: 3%;
+      display: flex;
+      flex-direction: column;
+      width: 33.33%;
+      &:nth-last-of-type(1) {
+        background-color: lightgray;
+      }
+      &:nth-last-of-type(3) {
+        background-color: lightgray;
+      }
+
       h2 {
-        font-size: 28px;
+        font-size: 40px;
         text-align: center;
       }
       p {
-        font-size: 16px;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: none;
+      }
+      img {
+        width: 100%;
+        margin: 5px 0;
+        max-width: 375px;
+      }
+    }
+    .feature:nth-of-type(3) {
+      p {
         border-bottom: none;
       }
     }

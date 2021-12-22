@@ -15,6 +15,14 @@ header {
   & > * {
     position: absolute;
   }
+  div.strap {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 45px;
+  }
   div.burger {
     position: fixed;
     z-index: 3;
@@ -30,7 +38,7 @@ header {
   }
 
   .fas {
-    color: rgb(77, 2, 2);
+    color: whitesmoke;
     display: none;
   }
   .show {
@@ -104,11 +112,14 @@ header {
 }
 @media (orientation: portrait) and (min-width: 360px) {
   header {
+    div.strap {
+      height: 55px;
+    }
     div.burger {
       top: 10px;
-      font-size: 38px;
-      line-height: 45px;
-      width: 45px;
+      font-size: 25px;
+      line-height: 30px;
+      width: 30px;
     }
     div.welcome {
       p {
@@ -146,6 +157,9 @@ header {
 
 @media (orientation: portrait) and (min-width: 768px) {
   header {
+    div.strap {
+      height: 70px;
+    }
     div.burger {
       font-size: 42px;
       line-height: 45px;
@@ -238,28 +252,31 @@ header {
 
 @media (orientation: landscape) and (min-width: 1024px) {
   header {
+    div.strap {
+      height: 66px;
+    }
     div.burger {
-      font-size: 35px;
-      line-height: 45px;
-      width: 45px;
+      font-size: 45px;
+      line-height: 55px;
+      width: 55px;
     }
 
     img.grey {
-      left: -10%;
+      left: -15%;
     }
     img.color {
-      height: 30%;
+      height: 35%;
     }
     div.welcome {
-      left: 45%;
+      left: 50%;
       right: 10%;
       font-size: 70px;
 
       p {
-        font-weight: bold;
+        font-size: 100px;
       }
       h1 {
-        font-size: 40px;
+        font-size: 60px;
         margin-top: 12px;
       }
       h2 {
