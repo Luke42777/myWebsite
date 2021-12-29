@@ -15,6 +15,11 @@ $(document).on("scroll", () => {
     if ($scrollValue > $spotToAnimate3) {
         $("section.hobby div.paint").addClass("active");
     }
-
+    //cleaner
+    if ($scrollValue < 100) {
+        $('section.hobby div').removeClass('active');
+    }
 })
+
+
 

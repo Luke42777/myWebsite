@@ -43,17 +43,17 @@ $(document).on('scroll', function () {
     const op1Height = $op1.height();
     const op2Height = $op2.height();
 
-    if (scrollValue > op1FromTop + op1Height / 2 - windowHeight) {
+    if (scrollValue > op1FromTop - windowHeight) {
         $op1.addClass('active');
 
     }
 
-    if (scrollValue > op2FromTop + op2Height / 2 - windowHeight) {
+    if (scrollValue > op2FromTop - windowHeight) {
         $op2.addClass('active');
 
     }
 
-    //Czyściciel
+    //cleaner
     if (scrollValue < 100) {
         $('article').removeClass('active');
     }
