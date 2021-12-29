@@ -1,4 +1,111 @@
 section.hobby {
-  height: 100vh;
-  background-color: blue;
+  h1 {
+    font-size: 26px;
+    color: white;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 25px 10px;
+    background-color: black;
+  }
+  article.interest {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35vh 35vh 35vh 35vh;
+    div {
+      background-size: cover;
+      background-position: center;
+      transition: 0.8s;
+      &.eat {
+        background-image: url(../images/food.jpg);
+        &.active{
+          transform: translateX(0);
+        }
+      }
+      &.climb {
+        background-image: url(../images/climbing.jpg);
+        transform: translateX(100vw);
+        &.active{
+          transform: translateX(0);
+        }
+      }
+      &.walk {
+        background-image: url(../images/walking.jpg);
+        transform: translateX(-100vw);
+        &.active{
+          transform: translateX(0);
+        }
+      }
+      &.paint {
+        background-image: url(../images/painting.jpg);
+        transform: translateX(100vw);
+        &.active{
+          transform: translateX(0);
+        }
+      }
+    }
+
+    div span {
+      display: block;
+      text-align: center;
+      width: 100%;
+      background-color: rgba(0, 0, 70, 0.5);
+      color: white;
+      font-size: 20px;
+      font-family: "Saira", sans-serif;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  section.hobby {
+    h1 {
+      font-size: 44px;
+      padding: 35px 20px;
+    }
+    article.interest {
+      div span {
+        font-size: 30px;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  section.hobby {
+    article.interest {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 35vh 35vh;
+      div {
+        &.eat {
+          transform: translateX(-100vw);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  section.hobby {
+    h1 {
+      font-size: 42px;
+      padding: 38px 23px;
+    }
+    article.interest {
+      div span {
+        font-size: 35px;
+        padding: 38px 0;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  section.hobby {
+    article.interest {
+      grid-template-rows: 50vh 50vh 50vh 50vh;
+    }
+  }
 }
