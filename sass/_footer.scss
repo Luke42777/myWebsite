@@ -1,0 +1,14 @@
+.footer {
+  background-color: #29a6dc;
+  color: white;
+  font-family: saira, sans-serif;
+  text-align: center;
+  padding: 30px;
+  font-size: 16px;
+}
+@media (min-width: 500px) {
+  .footer {
+    padding: 30px;
+    font-size: 18px;
+  }
+}
