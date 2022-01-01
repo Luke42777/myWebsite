@@ -106,7 +106,7 @@ section.hobby {
   section.hobby {
     article.interest {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 40vh 40vh;
+      grid-template-rows: 50vh 50vh;
       div {
         &.eat {
           transform: translateX(-100vw);
