@@ -50,7 +50,7 @@ header {
     bottom: -20%;
     left: -15%;
     opacity: 0.2;
-    animation: grey 4s linear infinite alternate;
+    animation: graey 4s linear infinite alternate;
   }
   img.color {
     height: 30%;
@@ -93,7 +93,7 @@ header {
   }
 }
 
-@keyframes grey {
+@keyframes graey {
   0% {
     transform: translateX(0);
   }
