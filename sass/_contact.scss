@@ -3,7 +3,7 @@ section.contact {
   h1 {
     padding-top: 20px;
     font-size: 26px;
-    color: #29a6dc;
+    color: white;
     font-family: "Saira Condensed", sans-serif;
     font-weight: bold;
     text-align: center;
@@ -20,11 +20,6 @@ section.contact {
         height: 36px;
         font-size: 14px;
         margin-bottom: 25px;
-        &:nth-of-type(3) {
-          color: #29a6dc;
-          background-color: black;
-          border: 2px solid #29a6dc;
-        }
       }
       textarea {
         font-family: "Saira", sans-serif;
@@ -35,8 +30,16 @@ section.contact {
         margin-bottom: 25px;
         font-size: 14px;
       }
+      button {
+        color: white;
+        background-color: black;
+        font-family: "Saira", sans-serif;
+        height: 40px;
+        font-size: 18px;
+        width: 100%;
+        border: 2px solid white;
+      }
     }
- 
     div.social {
       padding-top: 30px;
       text-align: center;
@@ -51,7 +54,7 @@ section.contact {
         span {
           padding-left: 20px;
           font-family: "Saira", sans-serif;
-          color: #29a6dc;
+          color: white;
           font-size: 18px;
           line-height: 40px;
         }
@@ -122,6 +125,10 @@ section.contact {
           height: 100px;
           margin-bottom: 28px;
           font-size: 18px;
+        }
+        button {
+          height: 45px;
+          font-size: 24px;
         }
       }
       div.social {
