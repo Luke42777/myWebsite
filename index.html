@@ -152,15 +152,34 @@
     <section class="contact" id="contact">
       <h1>Contact me</h1>
       <div class="wrap clearfix">
-        <form>
-          <input type="text" placeholder="Your name">
-          <input type="text" placeholder="Your email">
-          <textarea placeholder="Message"></textarea>
+        <form
+          id="contactform"
+          action="https://formsubmit.io/send/e81bf574-51b8-40b2-bb3b-db2dd562737d"
+          method="POST"
+        >
+          <input
+            name="_redirect"
+            type="hidden"
+            id="name"
+            value="https://luke42777.github.io/thankYou"
+          />
+
+          <input name="name" type="text" placeholder="Your name" />
+          <input name="email" type="email" placeholder="Your email" />
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Message"
+          ></textarea>
+          <input name="_formsubmit_id" type="text" style="display: none" />
           <button>Send message</button>
         </form>
         <div class="social">
-          <a href="https://www.facebook.com/profile.php?id=1275739661" target="blank">
-            <img src="images/contact1.png" alt="facebook icon">
+          <a
+            href="https://www.facebook.com/profile.php?id=1275739661"
+            target="blank"
+          >
+            <img src="images/contact1.png" alt="facebook icon" />
             <span>Łukasz Komsta</span>
           </a>
         </div>

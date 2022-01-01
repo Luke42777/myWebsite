@@ -26,6 +26,9 @@
         text-decoration: none;
         overflow: hidden;
         transition: 0.7s 1s;
+        &.active {
+          color: rgb(56, 204, 174);
+        }
       }
     }
   }
